@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Frog Chat</title>
+  <link rel="icon" href="img/frog.jpg" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+
+  <style>
+    :root {
+      --notselectcolor: #ffffff;
+      --selectcolor: #ffffff;
+      --newmessagecolor: #94d8ff;
+    }
+
+    #chat4 .form-control {
+      border-color: transparent;
+    }
+
+    #chat4 .form-control:focus {
+      border-color: transparent;
+      box-shadow: inset 0px 0px 0px 1px transparent;
+    }
+
+    .divider:after,
+    .divider:before {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #eee;
+    }
+
+    nav ul {
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+
+    .mt-10 {
+      margin-top: 10rem !important
+    }
+
+    .list-group-item-notselect {
+      --bs-list-group-color: var(--bs-secondary-text-emphasis);
+      --bs-list-group-bg: var(--bs-secondary-bg-subtle);
+      --bs-list-group-border-color: var(--bs-secondary-border-subtle);
+      --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+      --bs-list-group-action-hover-bg: var(--bs-secondary-border-subtle);
+      --bs-list-group-action-active-color: var(--bs-emphasis-color);
+      --bs-list-group-action-active-bg: var(--bs-secondary-border-subtle);
+      --bs-list-group-active-color: var(--bs-secondary-bg-subtle);
+      --bs-list-group-active-bg: var(--bs-secondary-text-emphasis);
+      --bs-list-group-active-border-color: var(--bs-secondary-text-emphasis)
+    }
+
+    .list-group-item-select {
+      --bs-list-group-color: var(--bs-secondary-text-emphasis);
+      --bs-list-group-bg: var(--selectcolor);
+      --bs-list-group-border-color: var(--bs-secondary-border-subtle);
+      --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+      --bs-list-group-action-hover-bg: var(--bs-secondary-border-subtle);
+      --bs-list-group-action-active-color: var(--bs-emphasis-color);
+      --bs-list-group-action-active-bg: var(--bs-secondary-border-subtle);
+      --bs-list-group-active-color: var(--bs-secondary-bg-subtle);
+      --bs-list-group-active-bg: var(--bs-secondary-text-emphasis);
+      --bs-list-group-active-border-color: var(--bs-secondary-text-emphasis)
+    }
+
+    .list-group-item-newmessage {
+      --bs-list-group-color: var(--bs-secondary-text-emphasis);
+      --bs-list-group-bg: var(--newmessagecolor);
+      --bs-list-group-border-color: var(--bs-secondary-border-subtle);
+      --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+      --bs-list-group-action-hover-bg: var(--bs-secondary-border-subtle);
+      --bs-list-group-action-active-color: var(--bs-emphasis-color);
+      --bs-list-group-action-active-bg: var(--bs-secondary-border-subtle);
+      --bs-list-group-active-color: var(--bs-secondary-bg-subtle);
+      --bs-list-group-active-bg: var(--bs-secondary-text-emphasis);
+      --bs-list-group-active-border-color: var(--bs-secondary-text-emphasis)
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
+    <div class="container-fluid">
+      <a href='${urlframechat}' class="d-grid gap-2 justify-content-md-start px-5">
+        <img class="btn" src="img/frog.jpg" style="height: 75px;" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      ${' ${menuprofile} '?no_esc}
+    </div>
+  </nav>
+
+  <main>
+    ${' ${maincontent} '?no_esc}
+  </main>
+
+  <script>
+    function getBaseUrl() {
+      return '${urlframebase}';
+    }
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/message.js"></script>
+  <script type="text/javascript" src="js/chat.js"></script>
+  <script type="text/javascript" src="js/addnewuser.js"></script>
+  <script type="text/javascript" src="js/sendPicture.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
+  <script type="text/javascript" src="js/updateProfile.js"></script>
+  <script type="text/javascript" src="js/contact.js"></script>
+  <script type="text/javascript" src="js/longpolling.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<main>
+  <div class="bg-body-tertiary pt-5">
+    <div class="container-fluid pt-5">
+      <div class="row flex-nowrap">
+        <div class="col-md-2 col-xl-2 px-sm-2 px-0 bg-secondary.bg-gradient border">
+          <div class="align-items-center align-items-sm-center align-items-md-center">
+            <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-black text-decoration-none">
+              <span class="fs-5 d-none d-sm-inline">Chats</span>
+            </a>
+            <div class="input-group mb-3">
+              <input class="form-control" type="text" id="textareaSearch" placeholder="Search">
+              <span class="input-group-text">
+                <img onclick="okToSearch()" class="btn img-fluid" src="img/sicon.png" style="height: 30px;" alt="">
+              </span>
+            </div>
+            <nav style="height: 650px; overflow-y:auto;">
+              <div id="listcontactul" class="list-group list-group-light">
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row col-md-10 col-xl-10">
+          <div class="py-5" style="background-color: #eee;">
+            <!-- la lista dei messaggi -->
+            <div class="container px-5">
+              <ul class="list-unstyled">
+                <li>
+                  <nav id="scrollchat" style="height: 600px; overflow-y:auto;">
+                    <ul id="listmessages" class="list-unstyled">
+                    </ul>
+                  </nav>
+                </li>
+                <li class="bg-white mb-3">
+                  <div class="form-outline">
+                    <textarea id="idTextArea" class="form-control" rows="3"></textarea>
+                  </div>
+                </li>
+                <li>
+                  <button onclick="newMessage()" type="button" class="btn btn-info btn-rounded float-end">Send</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <template id="listcontacttemplate">
+    <div class="listcontacttemplateli">
+      <a id="id-list-group-item" href="#!"
+        class="list-group-item list-group-item-action rounded-3 list-group-item-notselect">
+        <div class="row">
+          <div class="col-2">
+            <img alt="avatar" class="rounded-circle align-self-center shadow-1-strong" height="50">
+          </div>
+          <div class="col-8">
+            <div class="align-items-center ms-1" aria-expanded="false">
+              <span id="templateBadge"
+                class="position-absolute translate-middle p-1 bg-info border border-light rounded-circle">
+              </span>
+              <p id="contactname" class="fw-bold mb-0"></p>
+              <p id="contacttext" class="small text-muted"></p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div id="iconFavoriteid" class="nav-link active py-3 border-bottom rounded-0" aria-current="page" title="Add this contact to your favourites"
+              data-bs-toggle="tooltip" data-bs-placement="right">
+              <svg id="buttonIdAddToFavourites" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                fill="currentColor" class="bi bi-bookmark-plus" viewBox="0 0 16 16">
+                <path
+                  d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </template>
+  <template id="templateothermessage">
+    <li class="d-flex justify-content-between mb-4">
+      <img alt="avatar" id="otherpictureurl" class="rounded-circle d-flex align-self-start me-3 shadow-1-strong"
+        width="60">
+      <div class="card w-100">
+        <div class="card-header d-flex justify-content-between p-3">
+          <p id="othername" class="fw-bold mb-0"></p>
+          <p id="otherlasttime" class="text-muted small mb-0"><i class="far fa-clock"></i></p>
+        </div>
+        <div class="card-body">
+          <p id="othertext" class="mb-0">
+          </p>
+        </div>
+      </div>
+    </li>
+  </template>
+  <template id="templatemymmessage">
+    <li class="d-flex justify-content-between mb-4">
+      <div class="card w-100">
+        <div class="card-header d-flex justify-content-between p-3">
+          <p id="mylasttime" class="text-muted small mb-0"><i class="far fa-clock"></i></p>
+          <p id="myname" class="fw-bold mb-0"></p>
+        </div>
+        <div class="card-body">
+          <p id="mytext" class="mb-0">
+          </p>
+        </div>
+      </div>
+      <img id="mypictureurl" alt="avatar" class="rounded-circle d-flex align-self-start ms-3 shadow-1-strong"
+        width="60">
+    </li>
+  </template>
+
+</main>

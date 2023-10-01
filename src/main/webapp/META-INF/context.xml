@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/dbmsChat">
+  <Resource name="jdbc/dbmsChat" type="javax.sql.DataSource" auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost/dbmsChat?serverTimezone=UTC" username="admindbmsMs" password="password" maxActive="10" maxIdle="5" maxWait="10000"/>
+</Context>

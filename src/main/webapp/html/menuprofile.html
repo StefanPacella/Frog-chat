@@ -1,0 +1,19 @@
+<div>
+    <div class="btn-group d-grid gap-2 justify-content-md-end px-5">
+        <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img id="pictureUser" src="${picture}" alt="hugenerd" width="30" height="30" class="rounded-circle">
+            <span id="nicknameUser" class="d-none d-sm-inline mx-1"> ${nickname} </span>
+            <div id="iduser" data-value="${id}"></div>
+        </a>
+        <ul class="dropdown-menu text-small shadow">
+            <li><a href='${menuprofile_chat}' class="dropdown-item" >Chat</a></li>
+            <li><a href='${menuprofile_edit}' class="dropdown-item" >Edit profile</a></li>
+            <li><a href='${menuprofile_editpictureprofile}' class="dropdown-item" >Picture profile</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a href='${menuprofile_logout}' class="dropdown-item" >Sign out</a></li>
+        </ul>
+    </div>
+</div>

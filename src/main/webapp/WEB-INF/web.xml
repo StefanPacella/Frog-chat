@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>it.project.chat.controller.LoginController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Edit</servlet-name>
+		<servlet-class>it.project.chat.controller.EditController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EditPictureProfile</servlet-name>
+		<servlet-class>it.project.chat.controller.EditPictureProfileController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Signin</servlet-name>
+		<servlet-class>it.project.chat.controller.SigninController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Chat</servlet-name>
+		<servlet-class>it.project.chat.controller.ChatController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>it.project.chat.controller.LogoutController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Index</servlet-name>
+		<servlet-class>it.project.chat.controller.ChatController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Edit</servlet-name>
+		<url-pattern>/edit</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EditPictureProfile</servlet-name>
+		<url-pattern>/editpictureprofile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Index</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Signin</servlet-name>
+		<url-pattern>/signin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Chat</servlet-name>
+		<url-pattern>/chat</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>
+			30
+		</session-timeout>
+	</session-config>
+
+	<!-- parametri di configurazione per il template engine -->
+	<!-- template engine configuration parameters -->
+	<context-param>
+		<param-name>view.encoding</param-name>
+		<param-value>utf-8</param-value>
+	</context-param>
+	<context-param>
+		<param-name>view.date_format</param-name>
+		<param-value>dd/MM/yyyy hh:mm:ss</param-value>
+	</context-param>
+	<context-param>
+		<param-name>view.debug</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>view.template_directory</param-name>
+		<param-value>templates</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>view.error_template</param-name>
+		<param-value>errore.ftl.html</param-value>
+	</context-param>
+	<!-- data model statico di default per i template -->
+	<!-- static default data model for templates -->
+	<context-param>
+		<param-name>view.data.static.author</param-name>
+		<param-value>Stefano Pacella</param-value>
+	</context-param>
+	<!-- generatori data model dinamico di default per i template -->
+	<!-- dynamic default data model generators for templates -->
+
+
+	<context-param>
+		<param-name>data.source</param-name>
+		<param-value>java:comp/env/jdbc/progetto</param-value>
+	</context-param>
+	<resource-ref>
+		<res-ref-name>jdbc/chat</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Shareable</res-sharing-scope>
+	</resource-ref>
+</web-app>
