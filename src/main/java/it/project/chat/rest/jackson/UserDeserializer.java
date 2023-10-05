@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import it.project.chat.data.domainmodel.User;
 import it.project.chat.data.proxy.UserProxy;
 import it.project.chat.framework.sicurezza.XssFilter;
+import it.project.chat.framework.PictureUtility;
 
 public class UserDeserializer extends JsonDeserializer<User> {
 
