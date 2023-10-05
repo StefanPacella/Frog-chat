@@ -40,7 +40,7 @@ public class UserDeserializer extends JsonDeserializer<User> {
 		if (node.has("picture")) {
 			r.setPicture(node.get("picture").asText());
 		} else {
-			r.setPicture("PictureUtility.DEFAULTPICTUREPROFILE");
+			r.setPicture(PictureUtility.DEFAULTPICTUREPROFILE);
 		}
 
 		if (node.has("version")) {
