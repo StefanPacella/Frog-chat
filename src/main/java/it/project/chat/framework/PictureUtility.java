@@ -18,6 +18,7 @@ import it.project.chat.framework.data.BusinessException;
 public class PictureUtility {
 
 	private String path = "/home/dudu/eclipse/wks/progetto/src/main/webapp/picture_contact/";
+	public static final String DEFAULTPICTUREPROFILE = "picture_contact/frog.jpg";
 	private String fileName;
 
 	public PictureUtility() {
@@ -25,6 +26,11 @@ public class PictureUtility {
 	}
 
 	public String saveTheImg(HttpServletRequest request, String emailUser) throws BusinessException {
+		//// you need to choose the path for the profile pictures
+		throw new BusinessException("wrong path");
+		//// you need to choose the path for the profile pictures
+
+		
 		try {
 			findPath();
 		} catch (FileNotFoundException e) {
@@ -51,7 +57,7 @@ public class PictureUtility {
 		return "picture_contact/" + emailUser;
 	}
 
-	public boolean readTheFileImage() {
+	private boolean readTheFileImage() {
 		try {
 			if (ImageIO.read(new File(fileName)) == null)
 				throw new IOException();
