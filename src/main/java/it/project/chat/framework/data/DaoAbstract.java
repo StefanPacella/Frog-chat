@@ -61,7 +61,7 @@ public abstract class DaoAbstract<T extends DataItem> {
 	
 	public abstract Optional<T> querySelectConCondizioneSullaChiave(final String[] valore) throws BusinessException;
 
-	public QueryPreparedStatement<T> querySelectConCondizioneSullaChiaveNelDB(final String[] valore)
+	protected QueryPreparedStatement<T> querySelectConCondizioneSullaChiaveNelDB(final String[] valore)
 			throws BusinessException {
 		return daoAbstractQueryDbms.querySelectConCondizioneSullaChiaveNelDB(valore);
 	}
