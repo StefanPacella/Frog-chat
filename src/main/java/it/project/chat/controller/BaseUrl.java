@@ -2,7 +2,7 @@ package it.project.chat.controller;
 
 public class BaseUrl {
 
-	public static String URLBASE = "http://localhost:8080/Lamiaprimaprova/";
+	public static String URLBASE = "http://localhost:8080/chat/";
 
 	public static String URLLOGIN = URLBASE + "login";
 
