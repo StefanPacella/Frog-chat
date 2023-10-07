@@ -21,7 +21,7 @@ public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Map<Object, Object> map = new HashMap<>();
 
-	//// http://localhost:8080/Lamiaprimaprova/login
+	//// http://localhost:8080/chat/login
 	public LoginController() {
 		// TODO Auto-generated constructor stub
 		factoryComponent = FactoryComponent.instance;
