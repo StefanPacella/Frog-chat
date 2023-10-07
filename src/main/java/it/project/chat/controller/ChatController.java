@@ -19,7 +19,7 @@ public class ChatController extends HttpServlet {
 	private FactoryComponent factoryComponent;
 	private Map<Object, Object> map = new HashMap<>();
 
-	/////http://localhost:8080/Lamiaprimaprova/chat
+	/////http://localhost:8080/chat/chat
 	public ChatController() {
 		// TODO Auto-generated constructor stub
 		factoryComponent = FactoryComponent.instance;
