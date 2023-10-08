@@ -173,7 +173,7 @@ public class Cache<T extends DataItem> implements WriterReaderProblem<T> {
 			throw new BusinessException("Esiste una nuova versione");
 		return (t.getVersione() + 1);
 	}
-
+	//// this remove does not support ON DELETE CASCADE Option
 	public void remove(Predicate<T> predicate, QueryPreparedStatement<T> queryDataBase) {
 		Operation<T> o = new Operation<T>() {
 			@Override
