@@ -1,7 +1,6 @@
 package it.project.chat.framework.sicurezza;
 
-import org.owasp.html.HtmlPolicyBuilder;
-import org.owasp.html.PolicyFactory;
+import org.owasp.encoder.Encode;
 
 public class XssFilter {
 	
@@ -10,9 +9,8 @@ public class XssFilter {
 	}
 	
 	public String sanitize(String input) {
-		PolicyFactory policyFactory = new HtmlPolicyBuilder().allowStandardUrlProtocols().allowStyling()
-				.allowCommonBlockElements().allowCommonInlineFormattingElements().toFactory();
-		return policyFactory.sanitize(input);
+		input = Encode.forHtmlAttribute(input);
+		return input;
 	}
 
 }
