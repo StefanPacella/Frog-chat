@@ -33,8 +33,6 @@ public class ObjectMapperContextResolver implements ContextResolver<ObjectMapper
 		
 		mapper.enable(SerializationFeature.INDENT_OUTPUT);
 		SimpleModule customSerializer = new SimpleModule("CustomSerializersModule");
-
-		customSerializer.addDeserializer(UserUpdate.class, new UserUpdateDeserializer());
 		
 		customSerializer.addDeserializer(Message.class, new MessagesDeserializer());
 		customSerializer.addSerializer(Message.class, new MessagesSerializer());
