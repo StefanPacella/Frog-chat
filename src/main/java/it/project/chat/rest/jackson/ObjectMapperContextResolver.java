@@ -11,7 +11,6 @@ import com.fasterxml.jackson.databind.module.SimpleModule;
 import it.project.chat.data.domainmodel.Contact;
 import it.project.chat.data.domainmodel.Message;
 import it.project.chat.data.domainmodel.User;
-import it.project.chat.rest.model.UserUpdate;
 
 
 @Provider
