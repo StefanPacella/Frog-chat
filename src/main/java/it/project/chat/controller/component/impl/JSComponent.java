@@ -3,11 +3,12 @@ package it.project.chat.controller.component.impl;
 import java.util.Optional;
 
 import it.project.chat.framework.template.OutputStreamCatch;
+import it.project.chat.controller.BaseUrl;
 
 public class JSComponent extends OutputStreamCatch {
 
 	private Optional<String> html = Optional.empty();
-	private final static String URLREST = "http://localhost:8080/progetto/rest/";
+	private final static String URLREST = BaseUrl.URLCHAT + "rest/";
 	private String restElemento = "";
 
 	public JSComponent(String path) {
