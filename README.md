@@ -1,7 +1,6 @@
 ## Frog-chat a web-chat on tomcat.
 
-I have created an entire web-chat that uses Tomcat 9 and Bootstrap.
-This project was originally written in Italian, and even today, you can still find some Italian words in it. The project uses a cache with a reader-writer policy and acts as an intermediary between the requests and the DBMS. The schema is based on RESTful principles. The website is not vulnerable to SQL Injection and most of XSS attacks, there are some things that have not been implemented, such as the logout policy. To ease my development, i used algorithms that are not efficient, but of course, you have my permission to modify them. This project is released under the MIT license,
+I made a whole web chat using Tomcat 9 and Bootstrap. The project was first done in Italian, so you might still spot some Italian words here and there. It uses a cache with a reader-writer policy to manage requests between users and the database. I followed RESTful principles for the structure. The site is secure from SQL Injection and most XSS attacks, although there are some missing features like the logout policy. To make things easier during development, I used some less efficient algorithms, but feel free to tweak them as needed. This project is under the MIT license.
 
 
 ## Chat
